@@ -31,7 +31,7 @@ jobs:
       - name: '运行 【聚看点】'
         run: |
           cd ~/scripts
-          node jukan.js
+          node ~/master/Task/jukan.js
         env:
           JUKAN_COOKIE: ${{ secrets.JUKAN_COOKIE }}
           JUKAN_BODY: ${{ secrets.JUKAN_BODY }}

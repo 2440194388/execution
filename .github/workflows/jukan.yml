@@ -34,7 +34,7 @@ jobs:
           node Task/jukan.js
         env:
           JUKAN_COOKIE: ${{ secrets.JUKAN_COOKIE }}
-          JUKAN_COOKIE: ${{ secrets.JUKAN_BODY }}
+          JUKAN_BODY: ${{ secrets.JUKAN_BODY }}
           
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

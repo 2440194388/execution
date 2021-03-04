@@ -33,7 +33,7 @@ jobs:
           cd ~/scripts
           node zhima.js
         env:
-          COOKIES_SPLIT: ${{ secrets.COOKIES_SPLIT }}
+          ZM_zhimatxbody: ${{ secrets.ZM_zhimatxbody }}
           ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
           
           ZM_CASH: ${{ secrets.ZM_CASH }}

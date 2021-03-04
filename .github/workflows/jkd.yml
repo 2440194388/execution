@@ -33,7 +33,7 @@ jobs:
           cd ~/scripts
           node jkd.js
         env:
-          JKD_COOKIE: ${{ secrets.JKD_COOKIE }}
+          JUKAN_BODY: ${{ secrets.JKD_COOKIE }}
           
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

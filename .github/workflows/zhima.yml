@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/2440194388/execution.git ~/scripts
+          git clone https://github.com/2440194388/Wool-script.git ~/scripts
       - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
@@ -33,8 +33,8 @@ jobs:
           cd ~/scripts
           node zhima.js
         env:
-          ZM_zhimatxbody: ${{ secrets.ZM_zhimatxbody }}
           ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
+          ZM_zhimatxbody: ${{ secrets.ZM_zhimatxbody }}
           
           ZM_CASH: ${{ secrets.ZM_CASH }}
           #微信酱

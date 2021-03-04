@@ -34,8 +34,9 @@ jobs:
           node zhima.js
         env:
           COOKIES_SPLIT: ${{ secrets.COOKIES_SPLIT }}
-          ZM_CASH: ${{ secrets.ZM_CASH }}
+          ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
           
+          ZM_CASH: ${{ secrets.ZM_CASH }}
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           #BARK推送

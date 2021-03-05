@@ -6,7 +6,7 @@ name: huoshan 抖音火山版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 2-15 * * *'
+    - cron: '*/10 22-15 * * *'
   watch:
     types: started
   repository_dispatch:

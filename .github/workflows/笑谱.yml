@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ziye11/JavaScript.git ~/scripts
+          git clone https://github.com/2440194388/Wool-script.git ~/scripts
       - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:

@@ -31,7 +31,7 @@ jobs:
       - name: '运行 【笑谱】'
         run: |
           cd ~/scripts
-          node Task/iboxpay.js
+          node iboxpay.js
         env:
           XP_iboxpayHEADER: ${{ secrets.XP_iboxpayHEADER }}
           XP_CASH: ${{ secrets.XP_CASH }}

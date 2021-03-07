@@ -6,7 +6,7 @@ name: fqkk 番茄看看自动阅读
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 4,6,8,12 * * *'
+    - cron: '15 12,14,16,20 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -33,8 +33,7 @@ jobs:
           cd ~/scripts
           node fqkk.js
         env:
-          FQKKURLARR: ${{ secrets.FQKKURLARR }}
-          FQKKHDARR: ${{ secrets.FQKKHDARR }}
+          FQKK: ${{ secrets.FQKK }}
           
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

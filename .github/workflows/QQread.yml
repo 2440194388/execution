@@ -33,7 +33,7 @@ jobs:
           cd ~/scripts
           node QQread.js
         env:
-          COOKIES_SPLIT: ${{ secrets.COOKIES_SPLIT }}
+          QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
           
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

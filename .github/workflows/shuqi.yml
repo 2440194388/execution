@@ -60,17 +60,7 @@ jobs:
           SQ_shuqijsbookURL: ${{ secrets.SQ_shuqijsbookURL }}
           SQ_shuqijsbookBODY: ${{ secrets.SQ_shuqijsbookBODY }}
           SQ_shuqijssprwURL: ${{ secrets.SQ_shuqijssprwURL }}
-          SQ_shuqicjBODY: ${{ secrets.SQ_shuqicjBODY }}
-          #极速版
-          SQ_shuqijsspBODY: ${{ secrets.SQ_shuqijsspBODY }}
-          SQ_shuqijsydURL: ${{ secrets.SQ_shuqijsydURL }}
-          SQ_shuqijsydBODY: ${{ secrets.SQ_shuqijsydBODY }}
-          SQ_shuqijsqdBODY: ${{ secrets.SQ_shuqijsqdBODY }}
-          SQ_shuqijsqdspyURL: ${{ secrets.SQ_shuqijsqdspyURL }}
-          SQ_shuqijsqdspBODY: ${{ secrets.SQ_shuqijsqdspBODY }}
-          SQ_shuqijsrwBODY: ${{ secrets.SQ_shuqijsrwBODY }}
-          SQ_shuqijsfxBODY: ${{ secrets.SQ_shuqijsfxBODY }}
-          SQ_shuqijsbookURL: ${{ secrets.SQ_shuqijsbookURL }}
+          
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           #BARK推送

@@ -6,7 +6,7 @@ name: shuqi 书旗小说&极速版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '17 0-23 * * *'
   watch:
     types: started
   repository_dispatch:

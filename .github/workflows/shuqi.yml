@@ -28,7 +28,7 @@ jobs:
         run: |
           cd ~/scripts
           npm install
-      - name: '运行 【中青看点极速版】'
+      - name: '运行 【书旗小说&极速版】'
         run: |
           cd ~/scripts
           node shuqi.js

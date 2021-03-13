@@ -1,0 +1,98 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: shuqi 书旗小说&极速版
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 0-23 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: shuqi
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        run: 
+          git clone https://github.com/2440194388/Wool-script.git ~/scripts
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: npm install
+        run: |
+          cd ~/scripts
+          npm install
+      - name: '运行 【中青看点极速版】'
+        run: |
+          cd ~/scripts
+          node shuqi.js
+        env:
+          #标准版
+          SQ_shuqiuserURL: ${{ secrets.SQ_shuqiuserURL }}
+          SQ_shuqisyURL: ${{ secrets.SQ_shuqisyURL }}
+          SQ_shuqisyBODY: ${{ secrets.SQ_shuqisyBODY }}
+          SQ_shuqispBODY: ${{ secrets.SQ_shuqispBODY }}
+          SQ_shuqiscBODY: ${{ secrets.SQ_shuqiscBODY }}
+          SQ_shuqiydBODY: ${{ secrets.SQ_shuqiydBODY }}
+          SQ_shuqiqdBODY: ${{ secrets.SQ_shuqiqdBODY }}
+          SQ_shuqirwBODY: ${{ secrets.SQ_shuqirwBODY }}
+          SQ_shuqifxBODY: ${{ secrets.SQ_shuqifxBODY }}
+          SQ_shuqisprwURL: ${{ secrets.SQ_shuqisprwURL }}
+          SQ_shuqijlBODY: ${{ secrets.SQ_shuqijlBODY }}
+          SQ_shuqisqjlBODY: ${{ secrets.SQ_shuqisqjlBODY }}
+          SQ_shuqicjyURL: ${{ secrets.SQ_shuqicjyURL }}
+          SQ_shuqicjcsBODY: ${{ secrets.SQ_shuqicjcsBODY }}
+          SQ_shuqicjBODY: ${{ secrets.SQ_shuqicjBODY }}
+          SQ_shuqijsspBODY: ${{ secrets.SQ_shuqijsspBODY }}
+          SQ_shuqijsydURL: ${{ secrets.SQ_shuqijsydURL }}
+          SQ_shuqijsydBODY: ${{ secrets.SQ_shuqijsydBODY }}
+          SQ_shuqijsqdBODY: ${{ secrets.SQ_shuqijsqdBODY }}
+          SQ_shuqijsqdspyURL: ${{ secrets.SQ_shuqijsqdspyURL }}
+          SQ_shuqijsqdspBODY: ${{ secrets.SQ_shuqijsqdspBODY }}
+          SQ_shuqijsrwBODY: ${{ secrets.SQ_shuqijsrwBODY }}
+          SQ_shuqijsfxBODY: ${{ secrets.SQ_shuqijsfxBODY }}
+          SQ_shuqijsbookURL: ${{ secrets.SQ_shuqijsbookURL }}
+          SQ_shuqijsbookBODY: ${{ secrets.SQ_shuqijsbookBODY }}
+          SQ_shuqijssprwURL: ${{ secrets.SQ_shuqijssprwURL }}
+          SQ_shuqicjBODY: ${{ secrets.SQ_shuqicjBODY }}
+          #极速版
+          SQ_shuqijsspBODY: ${{ secrets.SQ_shuqijsspBODY }}
+          SQ_shuqijsydURL: ${{ secrets.SQ_shuqijsydURL }}
+          SQ_shuqijsydBODY: ${{ secrets.SQ_shuqijsydBODY }}
+          SQ_shuqijsqdBODY: ${{ secrets.SQ_shuqijsqdBODY }}
+          SQ_shuqijsqdspyURL: ${{ secrets.SQ_shuqijsqdspyURL }}
+          SQ_shuqijsqdspBODY: ${{ secrets.SQ_shuqijsqdspBODY }}
+          SQ_shuqijsrwBODY: ${{ secrets.SQ_shuqijsrwBODY }}
+          SQ_shuqijsfxBODY: ${{ secrets.SQ_shuqijsfxBODY }}
+          SQ_shuqijsbookURL: ${{ secrets.SQ_shuqijsbookURL }}
+          #微信酱
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          #BARK推送
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          #tg推送
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          #钉钉推送
+          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          #企业微信推送
+          QYWX_KEY: ${{ secrets.QYWX_KEY }}
+          #iGot推送
+          IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
+          #酷推(Cool Push)推送
+          QQ_SKEY: ${{ secrets.QQ_SKEY }}
+          QQ_MODE: ${{ secrets.QQ_MODE }}
+                    #pushplus推送
+          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
+          PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
+          #万能推
+             
+          ALLIN_KEY: ${{ secrets.ALLIN_KEY }} 
+          NOTICE_ID: ${{ secrets.NOTICE_ID }}

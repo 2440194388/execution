@@ -6,7 +6,7 @@ name: shuqi 书旗小说&极速版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 0-23 * * *'
+    - cron: '*/30 * * * *'
   watch:
     types: started
   repository_dispatch:
@@ -34,32 +34,32 @@ jobs:
           node shuqi.js
         env:
           #标准版
-          SQ_shuqiuserURL: ${{ secrets.SQ_shuqiuserURL }}
-          SQ_shuqisyURL: ${{ secrets.SQ_shuqisyURL }}
-          SQ_shuqisyBODY: ${{ secrets.SQ_shuqisyBODY }}
-          SQ_shuqispBODY: ${{ secrets.SQ_shuqispBODY }}
-          SQ_shuqiscBODY: ${{ secrets.SQ_shuqiscBODY }}
-          SQ_shuqiydBODY: ${{ secrets.SQ_shuqiydBODY }}
-          SQ_shuqiqdBODY: ${{ secrets.SQ_shuqiqdBODY }}
-          SQ_shuqirwBODY: ${{ secrets.SQ_shuqirwBODY }}
-          SQ_shuqifxBODY: ${{ secrets.SQ_shuqifxBODY }}
-          SQ_shuqisprwURL: ${{ secrets.SQ_shuqisprwURL }}
-          SQ_shuqijlBODY: ${{ secrets.SQ_shuqijlBODY }}
-          SQ_shuqisqjlBODY: ${{ secrets.SQ_shuqisqjlBODY }}
-          SQ_shuqicjyURL: ${{ secrets.SQ_shuqicjyURL }}
-          SQ_shuqicjcsBODY: ${{ secrets.SQ_shuqicjcsBODY }}
-          SQ_shuqicjBODY: ${{ secrets.SQ_shuqicjBODY }}
-          SQ_shuqijsspBODY: ${{ secrets.SQ_shuqijsspBODY }}
-          SQ_shuqijsydURL: ${{ secrets.SQ_shuqijsydURL }}
-          SQ_shuqijsydBODY: ${{ secrets.SQ_shuqijsydBODY }}
-          SQ_shuqijsqdBODY: ${{ secrets.SQ_shuqijsqdBODY }}
-          SQ_shuqijsqdspyURL: ${{ secrets.SQ_shuqijsqdspyURL }}
-          SQ_shuqijsqdspBODY: ${{ secrets.SQ_shuqijsqdspBODY }}
-          SQ_shuqijsrwBODY: ${{ secrets.SQ_shuqijsrwBODY }}
-          SQ_shuqijsfxBODY: ${{ secrets.SQ_shuqijsfxBODY }}
-          SQ_shuqijsbookURL: ${{ secrets.SQ_shuqijsbookURL }}
-          SQ_shuqijsbookBODY: ${{ secrets.SQ_shuqijsbookBODY }}
-          SQ_shuqijssprwURL: ${{ secrets.SQ_shuqijssprwURL }}
+          SQ_shuqiuserURL: ${{ secrets.SQ_SHUQIUSERURL }}
+          SQ_shuqisyURL: ${{ secrets.SQ_SHUQISYURL }}
+          SQ_shuqisyBODY: ${{ secrets.SQ_SHUQISYBODY }}
+          SQ_shuqispBODY: ${{ secrets.SQ_SHUQISPBODY }}
+          SQ_shuqiscBODY: ${{ secrets.SQ_SHUQISCBODY }}
+          SQ_shuqiydBODY: ${{ secrets.SQ_SHUQIYDBODY }}
+          SQ_shuqiqdBODY: ${{ secrets.SQ_SHUQIQDBODY }}
+          SQ_shuqirwBODY: ${{ secrets.SQ_shuqiRWBODY }}
+          SQ_shuqifxBODY: ${{ secrets.SQ_SHUQIFXBODY }}
+          SQ_shuqisprwURL: ${{ secrets.SQ_SHUQISPRWURL }}
+          SQ_shuqijlBODY: ${{ secrets.SQ_SHUQIJLBODY }}
+          SQ_shuqisqjlBODY: ${{ secrets.SQ_SHUQISQJLBODY }}
+          SQ_shuqicjyURL: ${{ secrets.SQ_SHUQICJYURL }}
+          SQ_shuqicjcsBODY: ${{ secrets.SQ_SHUQICJCSBODY }}
+          SQ_shuqicjBODY: ${{ secrets.SQ_SHUQICJBODY }}
+          SQ_shuqijsspBODY: ${{ secrets.SQ_SHUQIJSSPBODY }}
+          SQ_shuqijsydURL: ${{ secrets.SQ_SHUQIJSYDURL }}
+          SQ_shuqijsydBODY: ${{ secrets.SQ_SHUQIJSYDBODY }}
+          SQ_shuqijsqdBODY: ${{ secrets.SQ_SHUQIJSQDBODY }}
+          SQ_shuqijsqdspyURL: ${{ secrets.SQ_SHUQIJSQDSPYURL }}
+          SQ_shuqijsqdspBODY: ${{ secrets.SQ_SHUQIJSQDSPBODY }}
+          SQ_shuqijsrwBODY: ${{ secrets.SQ_SHUQIJSRWBODY }}
+          SQ_shuqijsfxBODY: ${{ secrets.SQ_SHUQIJSFXBODY }}
+          SQ_shuqijsbookURL: ${{ secrets.SQ_SHUQIJSBOOKURL }}
+          SQ_shuqijsbookBODY: ${{ secrets.SQ_SHUQIJSBOOKBODY }}
+          SQ_shuqijssprwURL: ${{ secrets.SQ_SHUQIJSSPRWURL }}
           
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

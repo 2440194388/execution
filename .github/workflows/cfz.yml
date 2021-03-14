@@ -33,8 +33,8 @@ jobs:
           cd ~/scripts
           node cfz.js
         env:
-          CFZ_url: ${{ secrets.CFZ_URL }}
-          CFZ_sbhd: ${{ secrets.CFZ_SBHD }}
+          CFZ_url: ${{ secrets.CFZURL }}
+          CFZ_sbhd: ${{ secrets.CFZHD }}
           
           #微信酱
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

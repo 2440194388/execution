@@ -6,7 +6,7 @@ name: tls 特仑苏小程序
 on:
   workflow_dispatch:
   schedule:
-    - cron: '27,47 4 * * *'
+    - cron: '27,47 4,9,11 * * *'
   watch:
     types: started
   repository_dispatch:

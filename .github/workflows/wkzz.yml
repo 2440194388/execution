@@ -6,7 +6,7 @@ name: wkzz 微客众智自动阅读
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5,35 1-14 * * *'
+    - cron: '5,35 2-15 * * *'
   watch:
     types: started
   repository_dispatch:

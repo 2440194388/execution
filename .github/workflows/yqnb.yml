@@ -3,7 +3,7 @@ name: yqnb 易趣牛帮
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7 7-20 * * *'
+    - cron: '7 0-13 * * *'
   watch:
     types: started
   repository_dispatch:

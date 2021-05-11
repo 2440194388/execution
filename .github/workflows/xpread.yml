@@ -6,7 +6,7 @@ name: xpread 笑谱阅读
 on:
   workflow_dispatch:
   schedule:
-    - cron: '14 2 * * *'
+    - cron: '21 0-23 * * *'
   watch:
     types: started
   repository_dispatch:

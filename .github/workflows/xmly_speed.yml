@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/2440194388/xmly_speed.git ~/scripts
+          git clone https://github.com/2440194388/Wool-script.git ~/scripts
        
       - name: Checkout2 
         uses: actions/checkout@v2
